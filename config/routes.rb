@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   
   get '/checkout' => 'cart#createOrder'
   
+  get '/paid/:id' => 'static_pages#paid'
+  
   
 
 

@@ -1,7 +1,6 @@
 <div id="itemsContainer">
 
 <p id="notice"><%= notice %></p>
-<% if @order.user.email == @user.email %>
 <h1>Order Details</h1>
 <table id="customers">
   <tr>
@@ -25,7 +24,7 @@
   </table>
 
 <h2>Order Items</h2>
-
+<% if @order.user.email == @user.email %>
  <table id="customers">
    <% @orderitems.each do |orderitem| %>
       <tr>
