@@ -7,4 +7,11 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+  
+  def createOrder
+ 
+   @orders = Order.all
+          
+  end
+
 end
