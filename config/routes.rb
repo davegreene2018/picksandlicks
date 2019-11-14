@@ -34,6 +34,15 @@ Rails.application.routes.draw do
   
   get '/paid/:id' => 'static_pages#paid'
   
+  get '/users' => 'static_pages#users'
+  
+  get '/upgrade/:id' => 'static_pages#upgrade'
+  
+  get '/upgrade/:id' => 'static_pages#downgrade'
+
+  
+  
+  
   
 
 
