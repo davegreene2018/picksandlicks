@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+       <header class="headSec">
+      <h1>liams Golf Store</h1>
+      
+      <ul>
+       <li><%= link_to "HOME", "/" %></li>
+        
+        <li><%= link_to "ABOUT", about_path %></li>
+        <li><%= link_to "HELP", help_path %></li>
+        
+      </ul>
+      
+      
+    </header>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+<footer class="foot">
+<h1>Im the Footer</h1>
+</footer>
+
+  </body>
+</html>
