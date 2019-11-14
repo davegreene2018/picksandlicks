@@ -25,7 +25,8 @@ class CartController < ApplicationController
     #sets session variable to nil and bring back to index
     session[:cart] = nil
     redirect_to :action => :index
-  end 
+  end
+
   
 
   
