@@ -13,7 +13,7 @@ def createOrder
  @cart = session[:cart] || {} # Get the content of the Cart
  @cart.each do | id, quantity |
  item = Item.find_by_id(id)
- @orderitem = @order.orderitems.build(:item_id => item.id, :title => item.title, :description => item.description, :quantity => quantity, :price=> item.price)
+ @orderitem = @order.orderitems.build(:item_id => item.id, :title => item.title, :description => item.description, :image_url => item.image_url, :quantity => quantity, :price=> item.price)
  @orderitem.save
  end
  

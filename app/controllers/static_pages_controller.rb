@@ -1,6 +1,11 @@
 class StaticPagesController < ApplicationController
   def home
+    @orders = Order.all
+    @orderitems = Orderitem.all
+    @items = Item.all
   end
+  
+  
 
   def help
       #current_user.update_attribute :admin, true

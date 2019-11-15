@@ -1,10 +1,24 @@
-<div class="mainCont">
-<%= image_tag("golfswing.jpg", alt: "Welcome Logo", :class => "welcomeIm") %>    
+
+ 
     
     
-<h1>Home</h1>
-<p>Welcome to your first home page!</p>
+<h2>Recently bought items</h2>
+<div id="itemsContainer">
+  
+  
+     
+      <% @orderitems.order(id: :desc).limit(5).each  do |orderitem| %>
+      <div class="itemhols">
+       <h1><%= orderitem.title %></h1> 
+       <%= link_to (image_tag orderitem.image_url, :class => "itemholsIm"), @item %>
+       
+       <p><%= orderitem.description %></p>
+       <a href="/items/<%= orderitem.id %>" class="button">View Item</a>
+      
+        
+      </div>
+    <% end %>
+      
+
+
 <br>
-<br>
-<p>This will be the home page of the web app we will create together</p>
-</div>
