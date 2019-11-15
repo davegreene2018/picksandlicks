@@ -76,12 +76,22 @@ li a {
 
 
 .foot {
-    min-height: 80px;
-    background-color: #b3e0ff;
+    min-height: 180px;
+    background-color: #333333;
     width: 100%;
     margin-top: 10px;
     overflow: auto;
     
+    
+}
+
+.foot p {
+   display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px
     
 }
 
@@ -238,13 +248,13 @@ input[type=submit]:hover {
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     padding: 8px;
 }
 
 #customers tr:nth-child(even){background-color: #FFF;}
 
-#customers tr:hover {background-color: #f2f2f2;}
+#customers tr:hover {background-color: #FFF;}
 
 #customers th {
     padding-top: 12px;

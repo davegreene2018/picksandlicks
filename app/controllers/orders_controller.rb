@@ -5,7 +5,13 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    @orderitems = Orderitem.all
+    @orderitems = Orderitem.where(order_id: params[:id])
+    @user = User.find(current_user.id)
+    @orders = @user.orders.all
     
+    
+     
     
   end
 
@@ -16,6 +22,7 @@ class OrdersController < ApplicationController
     @orderitems = Orderitem.where(order_id: params[:id])
     @user = User.find(current_user.id)
     @orders = @user.orders.all
+    
 
   end
 
