@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   
   get '/cart/decrease/:id' => 'cart#decrease'
   
+  get '/cart/increase/:id' => 'cart#increase'
+  
   get '/checkout' => 'cart#createOrder'
   
   get '/paid/:id' => 'static_pages#paid'
@@ -39,6 +41,10 @@ Rails.application.routes.draw do
   get '/upgrade/:id' => 'static_pages#upgrade'
   
   get '/upgrade/:id' => 'static_pages#downgrade'
+  
+  post '/search' => 'items#search'
+  
+  get '/search' => 'static_pages#searchproducts'
 
   
   

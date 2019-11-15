@@ -5,31 +5,37 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     
        <header class="headSec">
-      <h1>liams Golf Store</h1>
+      <h1>Picks & Licks</h1>
+      <p>Quality guitars and accessories at knock out prices.</p>
+       
       
       <ul>
        <li><%= link_to "HOME", "/" %></li>
         <li><%= link_to "PRODUCTS", "/items" %></li>
         <li><%= link_to "ABOUT", about_path %></li>
         <li><%= link_to "HELP", help_path %></li>
-        <li><%= link_to "View Cart", "/cart" %></li>
+        <li><%= link_to "VIEW CART", "/cart" %></li>
                                              <% if user_signed_in? %>
                   
-                 <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-                 <li><%= link_to "View Orders", orders_path  %></li>
-                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+                 <li><%= link_to 'EDIT PROFILE', edit_user_registration_path %></li>
+                 <li><%= link_to "ORDERS", orders_path  %></li>
+                 <li><%= link_to 'SIGN OUT', destroy_user_session_path, :method => :delete %></li>
           <% else %>
-                 <li><%= link_to 'Register', new_user_registration_path %></li> 
-                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+                 <li><%= link_to 'REGISTER', new_user_registration_path %></li> 
+                 <li><%= link_to 'SIGN IN', new_user_session_path %></li>
           <% end %>
          
-          <li><%= link_to "users", users_path  %></li>
+          <li><%= link_to "USERS", users_path  %></li>
+          <li><%= link_to "SEARCH", search_path  %></li>
+         
          
 
        
@@ -40,6 +46,7 @@
       
       
     </header>
+    
 
     <div class="container">
     <%= yield %>

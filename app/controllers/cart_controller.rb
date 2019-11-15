@@ -77,6 +77,21 @@ end
     redirect_to :action => :index
     
   end
+  
+  def increase
+    
+    id = params[:id]
+    cart = session[:cart]
+    if cart[id] == 1 then
+       cart[id] = cart[id] + 1
+        
+    else
+     cart[id] = cart[id] + 1
+    end
+     #Taking us to cart index[view] page
+    redirect_to :action => :index
+    
+  end
 
 
   

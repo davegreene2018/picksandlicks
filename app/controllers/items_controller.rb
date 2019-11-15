@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
+  
+  def search
+     st = "%#{params[:q]}%"
+     @items = Item.where("title like ?", st)
+  end
 
   # GET /items/1/edit
   def edit

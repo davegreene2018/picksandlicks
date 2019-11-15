@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+ <%=render 'layouts/search'%>
+
+
+<% if @items.length == 0  %>
+
+<h2>No products were found to match your search</h2>
+<% end %>
 
  <div id="itemsContainer">
   
@@ -47,7 +53,7 @@
         
       </div>
     <% end %>
-    <%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
+    
       
 </div>
 
