@@ -51,11 +51,12 @@
 
     <div class="container">
     <%= yield %>
+    
     </div>
 
 <footer class="foot">
 <p>Im the Footer</p>
-<i class="fab fa-facebook-square"></i>
+<%= link_to 'New Category', new_category_path, :class =>"button", :role=>"button"  %>
 </footer>
 
   </body>

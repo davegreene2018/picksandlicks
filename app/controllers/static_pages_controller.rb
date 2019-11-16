@@ -3,9 +3,15 @@ class StaticPagesController < ApplicationController
     @orders = Order.all
     @orderitems = Orderitem.all
     @items = Item.all
+    
+    @categories = Category.all
   end
   
-  
+  def category
+    catName = params[:title]
+    @items = Item.where("category like ? ", catName)
+  end
+
 
   def help
       #current_user.update_attribute :admin, true

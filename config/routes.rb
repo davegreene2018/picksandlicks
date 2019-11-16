@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :categories
   resources :orders do 
     resources:orderitems
   end
@@ -45,6 +46,8 @@ Rails.application.routes.draw do
   post '/search' => 'items#search'
   
   get '/search' => 'static_pages#searchproducts'
+  
+  get 'category/:title', to: 'static_pages#category'
 
   
   

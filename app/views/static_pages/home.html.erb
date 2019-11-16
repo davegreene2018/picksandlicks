@@ -1,13 +1,13 @@
 
  
     
-    
+  <%=render 'layouts/categories'%>  
 <h2>Recently bought items</h2>
 <div id="itemsContainer">
   
   
      
-      <% @orderitems.order(id: :desc).limit(5).each  do |orderitem| %>
+      <% @orderitems.order(id: :desc).limit(4).each  do |orderitem| %>
       <div class="itemhols">
        <h1><%= orderitem.title %></h1> 
        <%= link_to (image_tag orderitem.image_url, :class => "itemholsIm"), @item %>

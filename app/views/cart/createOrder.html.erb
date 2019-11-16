@@ -61,6 +61,8 @@ You just placed order no: <%= @orders.id %>
       </tr>
       
       <tr>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>paypal.Buttons().render('body');</script>
           <td><h2>  <a href="/paid/<%= @order.id %>" class="button">Pay Now</a></h2></td>
       </tr>
 
