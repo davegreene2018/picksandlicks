@@ -7,6 +7,8 @@ class StaticPagesController < ApplicationController
     @categories = Category.all
   end
   
+  
+  
   def category
     catName = params[:title]
     @items = Item.where("category like ? ", catName)
@@ -50,6 +52,10 @@ class StaticPagesController < ApplicationController
     @order = Order.last
     @order.update_attribute(:status , "Paid by User: #{current_user.email}")
     #"Paid by User:#{current_user.id} #{current_user.name} #{current_user.surname}")
+    
+    @orders = Order.all
+    @orderitems = Orderitem.all
+    @items = Item.all
     
   end
 
