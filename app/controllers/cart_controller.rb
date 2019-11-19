@@ -2,6 +2,7 @@ class CartController < ApplicationController
   before_action :authenticate_user!
   
 def createOrder
+ 
  # Step 1: Get the current user
  @user = User.find(current_user.id)
 
