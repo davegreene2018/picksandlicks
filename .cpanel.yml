@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/picksand/repositories/picksandlicks
-    - /bin/cp -R * $DEPLOYPATH
-   
