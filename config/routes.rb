@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :wishlists
   resources :categories
   resources :orders do 
     resources:orderitems
