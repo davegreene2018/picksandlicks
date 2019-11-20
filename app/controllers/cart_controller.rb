@@ -46,7 +46,7 @@ end
     cart[id]= 1
   end  
   
-    redirect_to :action => :index
+    redirect_to :action => :bag
   
   end
   
