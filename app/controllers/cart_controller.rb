@@ -49,6 +49,10 @@ end
     redirect_to :action => :index
   
   end
+  
+  def bag
+    
+  end 
 
   def clearCart
     #sets session variable to nil and bring back to index

@@ -49,7 +49,8 @@ Rails.application.routes.draw do
   get '/search' => 'static_pages#searchproducts'
   
   get 'category/:title', to: 'static_pages#category'
-
+  
+  get '/bag', to: 'cart#bag'
   
   
   
