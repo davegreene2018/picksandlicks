@@ -75,13 +75,8 @@
   </head>
 
   <body>
-    
-       <header class="headSec">
-      <h1>Picks & Licks</h1>
-      <p>Quality guitars and accessories at knock out prices.</p>
-       
-       <div class="navbar">
-      <ul>
+    <div class="navbar">
+      <ul class="topnav">
           
        <li><%= link_to "HOME", "/" %></li>
         <div class="dropdown">
@@ -126,9 +121,16 @@
 
         
       </ul>
+    
+       <header class="headSec">
+      <h1>Picks & Licks</h1>
+      <p>Quality guitars and accessories at knock out prices.</p>
+       
+       
      
       
     </header>
+      <div class="bottombar">a</div>
     
 
     <div class="container">
@@ -140,6 +142,7 @@
 <p>Im the Footer</p>
 <%= link_to 'New Category', new_category_path, :class =>"button", :role=>"button"  %>
 <%= link_to 'New Item', new_item_path, :class =>"button", :role=>"button" %>
+
 </footer>
 
   </body>

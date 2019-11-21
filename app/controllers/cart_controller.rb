@@ -24,7 +24,7 @@ def createOrder
  
 @orderitems = Orderitem.where(order_id: Order.last)
 
-session[:cart] = nil
+
 end
 
 
@@ -51,7 +51,15 @@ end
   end
   
   def bag
+ 
+  id = params[:id]
+  
+  @items = Item.where(id: id)
+  
+  @orders = Order.all
+    @orderitems = Orderitem.all
     
+   
   end 
 
   def clearCart

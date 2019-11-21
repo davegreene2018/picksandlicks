@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
 
 
   def help
-      #current_user.update_attribute :admin, true
+      current_user.update_attribute :admin, true
   end
 
   def about
@@ -52,6 +52,7 @@ class StaticPagesController < ApplicationController
     @order = Order.last
     @order.update_attribute(:status , "Paid by User: #{current_user.email}")
     #"Paid by User:#{current_user.id} #{current_user.name} #{current_user.surname}")
+    session[:cart] = nil
     
     @orders = Order.all
     @orderitems = Orderitem.all

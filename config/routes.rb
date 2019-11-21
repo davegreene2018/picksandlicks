@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   
   get 'category/:title', to: 'static_pages#category'
   
-  get '/bag', to: 'cart#bag'
+  get '/bag/:id', to: 'cart#bag'
   
   
   
