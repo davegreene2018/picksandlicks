@@ -7,6 +7,26 @@ class StaticPagesController < ApplicationController
     @categories = Category.all
   end
   
+  def fender
+       @items = Item.where("brand like ? ", fender)
+  end
+  
+  def gibson
+      
+  end
+  
+  def taylor
+      
+  end
+  
+  def takamine 
+      
+  end
+  
+  def martin
+      
+  end
+
   
   
   def category

@@ -75,6 +75,16 @@
   </head>
 
   <body>
+    
+    
+       <header class="headSec">
+      <h1>Picks & Licks</h1>
+      <p>Quality guitars and accessories at knock out prices.</p>
+       
+       
+     
+      
+    </header>
     <div class="navbar">
       <ul class="topnav">
           
@@ -84,9 +94,12 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-     <li><%= link_to "PRODUCTS", "/items"  %></li>
-     <li><%= link_to "PRODUCTS", "/items"  %></li>
-     <li><%= link_to "PRODUCTS", "/items"  %></li>
+      <%= link_to "Products", "/items"  %></li>
+     <li><%= link_to "FENDER", fender_path  %></li>
+     <li><%= link_to "GIBSON", gibson_path  %></li>
+     <li><%= link_to "TAYLOR", taylor_path  %></li>
+     <li><%= link_to "MARTIN", martin_path  %></li>
+     <li><%= link_to "TAKAMINE", takamine_path  %></li>
     </div>
   </div> 
       
@@ -121,16 +134,6 @@
 
         
       </ul>
-    
-       <header class="headSec">
-      <h1>Picks & Licks</h1>
-      <p>Quality guitars and accessories at knock out prices.</p>
-       
-       
-     
-      
-    </header>
-      <div class="bottombar">a</div>
     
 
     <div class="container">

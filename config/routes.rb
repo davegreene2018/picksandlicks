@@ -52,6 +52,12 @@ Rails.application.routes.draw do
   
   get '/bag/:id', to: 'cart#bag'
   
+  get '/fender' => 'static_pages#fender'
+  get '/gibson' => 'static_pages#gibson'
+  get '/taylor' => 'static_pages#taylor'
+  get '/martin' => 'static_pages#martin'
+  get '/takamine' => 'static_pages#takamine'
+  
   
   
   
