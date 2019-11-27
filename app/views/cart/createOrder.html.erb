@@ -43,6 +43,13 @@
     
     <% end %>
     
+    <% if @total > 600 %>
+    <% @total = @total * 0.85 %>
+    <% else %>
+    <% @total = @total %>
+    <% end %>
+    
+    
       <% @overall = shipping + @total%>
 
     
@@ -57,7 +64,15 @@
        <% else %>
        <td>Shipping €30</td>
        <% end %>
+       
+      <% if @total/0.85 > 600 %>
+      <td>You get a discount of 15%, for spending over 600</td>
+      <% else %>
+      <td>No discount</td>
+      <% end %>
+      
        <td>Grand Total: &euro; <%= @overall %></td>
+       
        
       </tr>
       

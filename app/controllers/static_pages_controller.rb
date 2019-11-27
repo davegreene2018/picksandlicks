@@ -36,7 +36,6 @@ class StaticPagesController < ApplicationController
 
 
   def help
-      current_user.update_attribute :admin, true
   end
 
   def about
@@ -55,7 +54,7 @@ class StaticPagesController < ApplicationController
   
   
   
-  def upgrade_admin
+  def upgrade
         @user.update_attribute(:adminrole, true)
         redirect_to :action => :admin_users
   end
